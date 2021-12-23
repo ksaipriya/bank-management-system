@@ -1,4 +1,4 @@
-export const states=[
+export const states = [
     {
         "id": 3901,
         "name": "Badakhshan",
