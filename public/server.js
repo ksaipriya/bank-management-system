@@ -6,7 +6,7 @@ const middlewares = jsonServer.defaults({
 })
 
 const port = process.env.PORT || 8000;
- server.use('/db',middlewares,router);
+ server.use(middlewares);
  server.use(
      jsonServer.rewriter({
          "/api/*" : "/$1",
