@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test case for testing display details component matches snapshot 1`] = `
+<Container
+  fluid={false}
+>
+  <h4
+    className="card-title"
+  >
+    You have successfully applied for a loan, here are you loan details
+  </h4>
+  <ForwardRef
+    bordered={true}
+    hover={true}
+    striped={true}
+  >
+    <thead>
+      <b
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        Loan Details
+      </b>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Loan Type
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          Loan Amount
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          Loan Apply Date
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          Loan Issue Date
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          Rate of Interest
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          Duration of Loan
+        </td>
+        <td>
+           years
+        </td>
+      </tr>
+    </tbody>
+  </ForwardRef>
+  <Form
+    inline={false}
+  >
+    <FormRow>
+      <FormGroup
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        className="register"
+      >
+        <FormLabel
+          column={false}
+          id="update"
+          srOnly={false}
+        >
+          Update your personal details?
+        </FormLabel>
+        <br />
+        <Button
+          active={false}
+          disabled={false}
+          onClick={[Function]}
+          variant="success"
+        >
+          Update Details
+        </Button>
+      </FormGroup>
+      <FormGroup
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        className="login"
+      >
+        <FormLabel
+          column={false}
+          id="logout"
+          srOnly={false}
+        >
+          No more changes?
+        </FormLabel>
+        <br />
+        <FormRow>
+          <FormGroup
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "render": [Function],
+              }
+            }
+          >
+            <Button
+              active={false}
+              disabled={false}
+              onClick={[Function]}
+              variant="primary"
+            >
+              Logout
+            </Button>
+          </FormGroup>
+        </FormRow>
+      </FormGroup>
+    </FormRow>
+  </Form>
+</Container>
+`;

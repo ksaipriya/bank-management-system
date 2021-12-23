@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test case for Success Component matches snapshot 1`] = `
+<Container
+  fluid={false}
+>
+  <h4
+    data-testid="success"
+  >
+    Successfully logged in!
+  </h4>
+  <Form
+    inline={false}
+  >
+    <FormRow>
+      <FormGroup
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        className="register"
+      >
+        <Button
+          active={false}
+          disabled={false}
+          onClick={[Function]}
+          variant="info"
+        >
+          Apply Loan
+        </Button>
+      </FormGroup>
+      <FormGroup
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        className="register"
+      >
+        <Button
+          active={false}
+          disabled={false}
+          onClick={[Function]}
+          variant="info"
+        >
+          Update Details
+        </Button>
+      </FormGroup>
+    </FormRow>
+  </Form>
+</Container>
+`;

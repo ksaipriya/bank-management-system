@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test case for update details component matches snapshot 1`] = `
+<Container
+  fluid={false}
+>
+  <Form
+    inline={false}
+  >
+    <FormGroup>
+      <h4
+        data-testid="title"
+      >
+        Update User
+      </h4>
+      <FormLabel
+        column={false}
+        id="custid"
+        srOnly={false}
+      >
+        Enter your customer id
+      </FormLabel>
+      <FormControl
+        aria-labelledby="custid"
+        name="custid"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Please enter your customer_id to edit your details!"
+        type="number"
+      />
+      <p />
+      <Button
+        active={false}
+        disabled={false}
+        onClick={[Function]}
+        variant="success"
+      >
+        Show Details
+      </Button>
+    </FormGroup>
+  </Form>
+</Container>
+`;

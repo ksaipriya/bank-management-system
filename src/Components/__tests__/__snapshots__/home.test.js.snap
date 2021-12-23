@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test case for Home Component matches snapshot 1`] = `
+<div>
+  <Container
+    fluid={false}
+  >
+    <h4
+      data-testid="header"
+    >
+      Welcome to XXX Bank
+    </h4>
+    <Form
+      inline={false}
+    >
+      <FormRow>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            }
+          }
+          className="register"
+        >
+          <Label
+            tag="label"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            Please Authenticate your email and register to enjoy our services
+          </Label>
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            }
+          }
+          className="register"
+        >
+          <Button
+            active={false}
+            disabled={false}
+            onClick={[Function]}
+            variant="primary"
+          >
+            Authenticate
+          </Button>
+        </FormGroup>
+      </FormRow>
+    </Form>
+  </Container>
+</div>
+`;

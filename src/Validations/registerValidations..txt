@@ -1,0 +1,45 @@
+import React, { useState } from 'react'
+
+export const UserValidations = () => {
+    const [form, setForm] = useState('')
+    const [errors, setErrors] = useState('')
+
+    const setField = (field, value) => {
+        setForm({
+            ...form,
+            [field]: value
+        })
+        if (!!errors[field]) setErrors({
+            ...errors,
+            [field]: null
+        })
+    }
+    const findFormErrors = () => {
+        const { name, username, password, guardianType, guardianName, address, citizen, contact, branchName, gender, maritalStatus, state, idtype, iddoc, refname, refnum, refadd } = form
+        const newErrors = {}
+        const phoneregex = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+        const nameregex = /^[aA-zZ\s]*$/
+        if (!name || name === '') newErrors.name = 'cannot be blank!'
+        else if (nameregex.test(name) === false) newErrors.name = 'can contain only letters and spaces'
+        if (!password || password === '') newErrors.password = 'cannot be blank'
+        if (!username || username === '') newErrors.username = 'cannot be blank'
+        if (!guardianType || guardianType === '') newErrors.guardianType = 'cannot be blank'
+        if (!guardianName || guardianName === '') newErrors.guardianName = 'cannot be blank'
+        if (!address || address === '') newErrors.address = 'cannot be blank'
+        if (!citizen || citizen === '') newErrors.citizen = 'cannot be blank'
+        if (!contact || contact === '') newErrors.contact = 'cannot be blank'
+        else if (phoneregex.test(contact) === false) newErrors.contact = 'invalid phone number'
+        if (!branchName || branchName === '') newErrors.branchName = 'cannot be blank'
+        if (!gender || gender === '') newErrors.gender = 'select the gender'
+        if (!maritalStatus || maritalStatus === '') newErrors.maritalStatus = 'select your marital status'
+        if (!state || state === '') newErrors.state = 'select your marital status'
+        if (!idtype || idtype === '') newErrors.idtype = 'cannot be blank'
+        if (!iddoc || iddoc === '') newErrors.iddoc = 'cannot be blank'
+        if (!refname || refname === '') newErrors.refname = 'cannot be blank'
+        else if (nameregex.test(refname) === false) newErrors.refname = 'can contain only letters and spaces'
+        if (!refnum || refnum === '') newErrors.refnum = 'cannot be blank'
+        if (!refadd || refadd === '') newErrors.refadd = 'cannot be blank'
+        return newErrors
+    }
+    return { form, setField, findFormErrors }
+}

@@ -1,0 +1,5 @@
+.sorry {
+    color:red;
+    text-align: center;
+    animation: animate 1.5s linear infinite;
+}

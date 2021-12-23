@@ -1,0 +1,18 @@
+.register{
+    text-align: center;
+}
+
+.login{
+    text-align:center;
+}
+
+.logout{
+    display: flex; 
+    justify-content:flex-end;
+    padding-top: 6px;
+}
+h4{
+    color:green;
+    text-align: center;
+    animation: animate 1.5s linear infinite;
+}
