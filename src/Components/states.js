@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 export const states = [
     {
         "id": 3901,

@@ -8,7 +8,7 @@ import './index.css';
 ReactDOM.render(
   <Auth0Provider domain="dev-tghowmdv.us.auth0.com"
   clientId="56Ehghr655GZtuci3YEq1rhmXcTTYMr6"
-  redirectUri="https://bank-management-sys.herokuapp.com/">
+  redirectUri="http://localhost:3000">
     <App />
   </Auth0Provider>,
   document.getElementById('root')
