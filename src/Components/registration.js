@@ -5,7 +5,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import { countries } from './countries'
 import { states } from './states';
-const Registration = () => {
+const Reg = () => {
 
     let history = useHistory()
     const [form, setForm] = useState({})
@@ -375,4 +375,4 @@ const Registration = () => {
         </div>
     )
 }
-export default Registration
+export default Reg
