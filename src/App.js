@@ -14,8 +14,9 @@ import Reg from './Components/registration';
 function App() {
   return (
     <div>
-    <Home/>
+      <Home />
       <Router>
+        <Switch>
           <Route exact path='/' component={Welcome} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/success" component={success} />
@@ -25,8 +26,9 @@ function App() {
           <Route exact path="/UpdatedDetails" component={UpdatedDetails} />
           <Route exact path="/register" component={Reg} />
           <Route exact path="/displaydetails" component={LoanDetaiils} />
+        </Switch>
       </Router>
-    </div>
+    </div >
   );
 }
 export default App;

@@ -11,6 +11,7 @@ const LoanDetails = (e) => {
     const [data, setData] = useState('')
     let history = useHistory()
 
+    //fetch the details from the db and store in data variable
     useEffect(() => {
         setKey(e.location.state.key)
         fetch('https://bank-management-sys.herokuapp.com/api/users').then(res => {
