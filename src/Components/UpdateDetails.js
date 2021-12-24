@@ -57,6 +57,8 @@ const UpdateUser = () => {
                 setUserData(data)
             })
     }, [])
+
+    
     return (
         <Container>
             <Form>

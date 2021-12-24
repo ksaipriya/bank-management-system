@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useHistory } from 'react-router';
 import { useAuth0 } from '@auth0/auth0-react'
 import { Form, Button, Col, Container } from 'react-bootstrap';
 import 'react-datepicker/dist/react-datepicker.css'
 import { Label } from 'reactstrap';
 
+// landing page
 const Home = () => {
     const { loginWithRedirect, isAuthenticated } = useAuth0()
-    // landing page
+    let history = useHistory()
+    useEffect(() => {
+        if (isAuthenticated) {
+            history.push('/welcome')
+        }
+    }, [isAuthenticated])
+
     return (
         <div>
             {!isAuthenticated &&
