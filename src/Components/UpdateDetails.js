@@ -45,7 +45,7 @@ const UpdateUser = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:8000/users')
+        fetch('https://bank-management-sys.herokuapp.com/api/users')
             .then(res => {
                 return res.json()
             }).then(data => {

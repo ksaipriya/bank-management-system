@@ -87,7 +87,7 @@ const Reg = () => {
             form.registrationdate = regDate
             //const obj = { id, name, email, password, username, guardiantype, guardianname, address, citizenship, contactno, branch, birth, citizenstatus, deposittype, gender, maritalstatus, regDate, country, state, idtype, idnum, accholdername, accnum, accaddress, customerId, customerAccountNumber }
             console.log(customerAccountNumber)
-            fetch('http://localhost:8000/users', {
+            fetch('https://bank-management-sys.herokuapp.com/api/users', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(form)
@@ -128,7 +128,7 @@ const Reg = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:8000/users')
+        fetch('https://bank-management-sys.herokuapp.com/api/users')
             .then(res => {
                 return res.json()
             }).then(data => {

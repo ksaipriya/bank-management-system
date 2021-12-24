@@ -77,7 +77,7 @@ const Test = (a) => {
 
     const updateDetails = (e) => {
         console.log(e)
-        fetch(`http://localhost:8000/users/${temp}`, {
+        fetch(`https://bank-management-sys.herokuapp.com/api/users/${temp}`, {
             method: 'PATCH',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(form)
@@ -87,7 +87,7 @@ const Test = (a) => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:8000/users')
+        fetch('https://bank-management-sys.herokuapp.com/api/users')
             .then(res => {
                 return res.json()
             }).then(data => {

@@ -57,7 +57,7 @@ const ApplyLoan = (a) => {
         e.issuedate=issueDate
         alert('Loan Applied!')
         console.log(e)
-        fetch(`http://localhost:8000/users/${key}`,{
+        fetch(`https://bank-management-sys.herokuapp.com/api/users/${key}`,{
             method: 'PATCH',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(e)
