@@ -71,7 +71,7 @@ const ApplyLoan = (a) => {
 
     useEffect(() => {
         setKey(a.location.state.key)
-        fetch('http://localhost:8000/users').then(res => {
+        fetch('https://bank-management-sys.herokuapp.com/api/users').then(res => {
             return res.json()
         }).then(data => {
             for (let index = 0; index < data.length; index++) {
