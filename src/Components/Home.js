@@ -6,6 +6,7 @@ import { Label } from 'reactstrap';
 
 const Home = () => {
     const { loginWithRedirect, isAuthenticated } = useAuth0()
+    // landing page
     return (
         <div>
             {!isAuthenticated &&
@@ -16,6 +17,7 @@ const Home = () => {
                             <Form.Group as={Col} className="register">
                                 <Label>Please Authenticate your email and register to enjoy our services</Label>
                             </Form.Group>
+                            {/*authenticate button redirects to auth0 website*/}
                             <Form.Group as={Col} className="register">
                                 <Button onClick={() => loginWithRedirect()}>Authenticate</Button>
                             </Form.Group>

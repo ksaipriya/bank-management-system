@@ -2,6 +2,9 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button, Col, Container } from 'react-bootstrap';
 import { useHistory } from 'react-router';
+
+
+//the prop 'a' has the details of the user who is logged in
 const Success = (a) => {
     let history = useHistory();
     const applyLoan=(e)=>{
@@ -10,10 +13,12 @@ const Success = (a) => {
         history.push({
             pathname: '/applyloan',
             state: {
+                //acquired from login page and holds id of user
                 key: a.location.state.key
             }
         })
     }
+    //naviagtes to the update details page
     const updateDetails=()=>{
         history.push('/updateuser')
     }

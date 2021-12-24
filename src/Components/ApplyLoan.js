@@ -18,6 +18,7 @@ const ApplyLoan = (a) => {
     const [data, setData] = useState('')
     let loanSchema = ''
 
+    //validations for educational loan
     if (loanType === 'educational') {
         loanSchema = yup.object({
             loanamount: yup.string().required(),
@@ -32,6 +33,7 @@ const ApplyLoan = (a) => {
             income: yup.string().required(),
         })
     }
+    //vlaidations for personal / home loans
     else {
         loanSchema = yup.object({
             loanamount: yup.string().required(),
@@ -49,14 +51,16 @@ const ApplyLoan = (a) => {
         resolver: yupResolver(loanSchema)
     });
 
+    //functions on clicking the submit
     const onSubmit = (e) => {
         console.log(data)
         console.log(e)
         e.loantype = loanType
-        e.applydate=applyDate
-        e.issuedate=issueDate
+        e.applydate= applyDate
+        e.issuedate= issueDate
         alert('Loan Applied!')
         console.log(e)
+        //details are fetched and loan details are appended to the current user data in server
         fetch(`https://bank-management-sys.herokuapp.com/api/users/${key}`,{
             method: 'PATCH',
             headers: { "Content-Type": "application/json" },
@@ -69,6 +73,7 @@ const ApplyLoan = (a) => {
         })) 
     }
 
+    //sets the data of the user when component is rendered
     useEffect(() => {
         setKey(a.location.state.key)
         fetch('https://bank-management-sys.herokuapp.com/api/users').then(res => {

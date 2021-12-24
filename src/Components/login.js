@@ -11,7 +11,7 @@ const Login = () => {
     let flag = 'false'
     let history = useHistory()
     const [userData, setUserData] = useState('')
-    const [userLastData, setLastUserData] = useState('')
+    const [currentuserData, setCurrentUserData] = useState('')
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(loginSchema)
     });
@@ -19,13 +19,16 @@ const Login = () => {
     const onSubmit = (e) => {
         console.log(e)
         let k = ''
+        //confirm if the credentials are correct
         for (let index = 0; index < userData.length; index++) {
             if (e.username === userData[index].username && e.password === userData[index].password) {
-                k = userData[index].id
+                //if the details are true the value of k is set to id of the user which is passed on to the next component through props
+                k = userData[index].id 
                 flag = 'true'
                 break
             }
         }
+        //if the user is verified then naviagte to the success page
         if (flag === 'true') {
             history.push({
                 pathname: '/success',
@@ -34,14 +37,18 @@ const Login = () => {
                 }
             })
         }
+        //error popups if wrong credentials are given
         else {
             alert('Enter correct details else register!')
         }
     }
 
+    //navigates toregistration component if register button is clicked
     const redirettoregister = () => {
         history.push('/register')
     }
+
+    //fetching the details from the server and store in a local constant for verification
     useEffect(() => {
         fetch('https://bank-management-sys.herokuapp.com/api/users')
             .then(res => {
@@ -49,17 +56,17 @@ const Login = () => {
             })
             .then(data => {
                 setUserData(data)
-                console.log(userData)
-                setLastUserData(data[data.length - 1])
+                setCurrentUserData(data[data.length - 1])
+                console.log(currentuserData)
             })
     }, [])
 
     return (
         <div>
             <Container>
-                <h3 className="success">Hey {userLastData.username},You are successfully registered!</h3>
-                <h4 className> Your Customer Id is : {userLastData.customerId}</h4>
-                <h4 className> Your Account Number is : {userLastData.customerAccountNumber}</h4>
+                <h3 className="success">Hey {currentuserData.username},You are successfully registered!</h3>
+                <h4 className> Your Customer Id is : {currentuserData.customerId}</h4>
+                <h4 className> Your Account Number is : {currentuserData.customerAccountNumber}</h4>
                 <h2 className="title" data-testid="login" >LOGIN</h2>
                 <Form >
                     <Form.Group>

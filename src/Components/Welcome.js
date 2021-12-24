@@ -9,6 +9,7 @@ const Welcome = () => {
     const { logout, isAuthenticated } = useAuth0()
     
     return (
+        // the segment to be shown only if the user is authenticated
         <div className="container">
             {isAuthenticated &&
                 <Container>

@@ -5,7 +5,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import { countries } from './countries'
 import { states } from './states';
-const Reg = () => {
+const Registration = () => {
 
     let history = useHistory()
     const [form, setForm] = useState({})
@@ -30,6 +30,7 @@ const Reg = () => {
         })
     }
 
+    //sets the account type field
     const setDeposit = (data) => {
         let type = data.target.value;
         setField('accountType', type)
@@ -44,6 +45,7 @@ const Reg = () => {
         setField('depositamount', k)
     }
 
+    //sets the citizen status
     const citizenStatus = (dob) => {
         setBirthDate(dob)
         setField('dob', dob)
@@ -61,6 +63,7 @@ const Reg = () => {
         setField('citizenstatus', a)
     }
 
+    //selecting the state and country using the js files and mapping them
     const selectstate = (e) => {
         let s = e.target.value;
         setField('country', s)
@@ -72,6 +75,8 @@ const Reg = () => {
         //console.log(sts)
         setSt(sts)
     }
+
+    //on submit generates the customer id, account number and appends the same to the user data in db
     const handleSubmit = (data) => {
         data.preventDefault()
         const newErrors = findFormErrors()
@@ -97,6 +102,7 @@ const Reg = () => {
         }
     }
 
+    //validations for the fields
     const findFormErrors = () => {
         const { name,email, username, password, guardianType, guardianName, address, citizen, contact, branchName, gender, maritalStatus, state, idtype, iddoc, refname, refnum, refadd } = form
         const newErrors = {}
@@ -127,6 +133,7 @@ const Reg = () => {
         return newErrors
     }
 
+    //fetches the last id and sets the id field
     useEffect(() => {
         fetch('https://bank-management-sys.herokuapp.com/api/users')
             .then(res => {
@@ -368,4 +375,4 @@ const Reg = () => {
         </div>
     )
 }
-export default Reg
+export default Registration

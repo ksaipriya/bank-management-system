@@ -16,6 +16,7 @@ const Test = (a) => {
     const { handleSubmit } = useForm({});
     let history = useHistory()
 
+    //pre populate the fields by fetching dataof current user from db
     for (let index = 0; index < user.length; index++) {
         if (temp === user[index].id) {
             document.getElementById('name').setAttribute('value', user[index].name)
@@ -49,6 +50,7 @@ const Test = (a) => {
         })
     }
 
+    //setting the account type of user
     const setDeposit = (data) => {
         let type = data.target.value;
         setField('accountType', type)
@@ -63,6 +65,7 @@ const Test = (a) => {
         setField('depositamount', k)
     }
 
+    //setting the state and country
     const selectstate = (e) => {
         let s = e.target.value;
         setField('country', s)
@@ -75,6 +78,7 @@ const Test = (a) => {
         setSt(sts)
     }
 
+    //on clicking submit, update the details of the current user in the db
     const updateDetails = (e) => {
         console.log(e)
         fetch(`https://bank-management-sys.herokuapp.com/api/users/${temp}`, {
@@ -86,6 +90,7 @@ const Test = (a) => {
         })
     }
 
+    //fetches and sets the data 
     useEffect(() => {
         fetch('https://bank-management-sys.herokuapp.com/api/users')
             .then(res => {

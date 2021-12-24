@@ -5,6 +5,8 @@ import { Form, Button, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import './styles/UpdateDetails.css'
+
+//renders a component that asks for the customer id to update the details of the user
 const UpdateUser = () => {
 
     let flag = 'false'
@@ -22,6 +24,7 @@ const UpdateUser = () => {
     });
 
 
+    //gets the customer id from the user and checks the customer id in the database
     const handleUser = (e) => {
         let z = ''
         for (let index = 0; index < userData.length; index++) {
@@ -32,6 +35,8 @@ const UpdateUser = () => {
                 break
             }
         }
+
+        //navigates to updateddetails page with k as prop which holds the id
         if (flag === 'true') {
             history.push({
                 pathname: '/UpdatedDetails',
