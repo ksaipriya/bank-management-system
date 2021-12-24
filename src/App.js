@@ -14,9 +14,9 @@ import Reg from './Components/registration';
 function App() {
   return (
     <div>
-      <Home />
       <Router>
         <Switch>
+          <Home />
           <Route exact path='/' component={Welcome} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/success" component={success} />
