@@ -16,7 +16,6 @@ function App() {
     <div>
     <Home/>
       <Router>
-        <Switch>
           <Route exact path='/' component={Welcome} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/success" component={success} />
@@ -26,7 +25,6 @@ function App() {
           <Route exact path="/UpdatedDetails" component={UpdatedDetails} />
           <Route exact path="/register" component={Registration} />
           <Route exact path="/displaydetails" component={LoanDetaiils} />
-        </Switch>
       </Router>
     </div>
   );
