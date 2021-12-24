@@ -1,10 +1,6 @@
 {
   "users": [
     {
-      "refadd": "H:NO 6-2-452,PLOT NO. B-60311",
-      "id": 1
-    },
-    {
       "id": 2,
       "name": "",
       "email": "",
@@ -98,10 +94,6 @@
       "customerAccountNumber": 2515190941018494
     },
     {
-      "name": "Crocin",
-      "id": 5
-    },
-    {
       "email": "abc@gmail.com",
       "password": "1111",
       "username": "priya",
@@ -164,12 +156,6 @@
     },
     {
       "name": "Crocin",
-      "email": "k.saipriya08@gmail.com",
-      "hello": "hello",
-      "id": 9
-    },
-    {
-      "name": "Crocin",
       "email": "abc@gmail.com",
       "password": "1111",
       "username": "priya",
@@ -192,102 +178,6 @@
       "refadd": "H:NO 6-2-452,PLOT NO. B-603",
       "hello": "hello",
       "id": 10
-    },
-    {
-      "email": "efgh",
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "name": "Sai Priya",
-      "email": "919882@cognizant.com",
-      "customerId": 983,
-      "customerAccountNumber": 4821416988091003,
-      "registrationdate": null,
-      "id": 13
-    },
-    {
-      "name": "",
-      "birth": null,
-      "citizenstatus": null,
-      "deposittype": null,
-      "regDate": null,
-      "country": "",
-      "email": "",
-      "password": "",
-      "username": "",
-      "guardiantype": "",
-      "guardianname": "",
-      "address": "",
-      "citizenship": "",
-      "contactno": "",
-      "branch": "",
-      "gender": null,
-      "maritalstatus": "",
-      "state": "",
-      "idtype": "",
-      "iddoc": "",
-      "accnum": "",
-      "accname": "",
-      "accadd": "refadd",
-      "id": 14
-    },
-    {
-      "name": "Crocin",
-      "email": "k.saipriya08@gmail.com",
-      "customerId": 693,
-      "customerAccountNumber": 3291484373492099,
-      "registrationdate": null,
-      "id": 15
-    },
-    {
-      "name": "Rahul K",
-      "email": "abc@gmail.com",
-      "password": "1234",
-      "username": "",
-      "guardianType": "brother",
-      "guardianName": "rahul",
-      "address": "",
-      "citizen": "indian",
-      "contact": "8925161536",
-      "branchName": "ghjk",
-      "citizenstatus": null,
-      "depositamount": 5000,
-      "gender": null,
-      "maritalStatus": "unmarried",
-      "country": "",
-      "state": "",
-      "idtype": "",
-      "iddoc": "",
-      "refname": "GHJK",
-      "refnum": "11111111111112",
-      "refadd": "H:NO 6-2-452,PLOT NO. B-603",
-      "customerId": 149,
-      "customerAccountNumber": 5222728522489539,
-      "registrationdate": "2021-09-27T18:30:00.000Z",
-      "id": 16,
-      "birth": null,
-      "deposittype": null,
-      "regDate": null,
-      "guardiantype": "",
-      "guardianname": "",
-      "citizenship": "",
-      "contactno": "",
-      "branch": "",
-      "maritalstatus": "",
-      "accnum": "",
-      "accname": "",
-      "accadd": ""
-    },
-    {
-      "name": "Crocin",
-      "email": "abc@gmail.com",
-      "customerId": 136,
-      "customerAccountNumber": 2969001147636947,
-      "registrationdate": null,
-      "id": 17
     },
     {
       "name": "Sai Priya",
@@ -333,22 +223,6 @@
       "comp_experience": "3",
       "applydate": "2021-10-13T18:30:00.000Z",
       "issuedate": "2021-10-17T18:30:00.000Z"
-    },
-    {
-      "name": "priya",
-      "email": "abc@gmail.com",
-      "customerId": 745,
-      "customerAccountNumber": 912918625425134,
-      "registrationdate": null,
-      "id": 19
-    },
-    {
-      "name": "Crocin",
-      "email": "k.saipriya08@gmail.com",
-      "customerId": 896,
-      "customerAccountNumber": 1256924231171989,
-      "registrationdate": null,
-      "id": 20
     },
     {
       "name": "111",
