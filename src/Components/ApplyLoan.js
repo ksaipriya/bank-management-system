@@ -73,7 +73,7 @@ const ApplyLoan = (a) => {
         })) 
     }
 
-    //sets the data of the user when component is rendered
+    //sets the data of the user when component is rendered using the key
     useEffect(() => {
         setKey(a.location.state.key)
         fetch('https://bank-management-sys.herokuapp.com/api/users').then(res => {

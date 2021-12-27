@@ -4,6 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { Form, Button, Col, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/welcome.css'
+
 const Welcome = () => {
     let history = useHistory();
     const { logout, isAuthenticated } = useAuth0()

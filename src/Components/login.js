@@ -10,8 +10,11 @@ const Login = () => {
     
     let flag = 'false'
     let history = useHistory()
+    //data from the data base is stored in this userdata
     const [userData, setUserData] = useState('')
+    //the details of the user logged in is stored in currentuserdata
     const [currentuserData, setCurrentUserData] = useState('')
+    
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(loginSchema)
     });

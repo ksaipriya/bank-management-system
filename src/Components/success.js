@@ -5,6 +5,7 @@ import { useHistory } from 'react-router';
 
 
 //the prop 'a' has the details of the user who is logged in
+//this page is rendered if user is successfully loggedin
 const Success = (a) => {
     let history = useHistory();
     const applyLoan=(e)=>{
@@ -22,6 +23,7 @@ const Success = (a) => {
     const updateDetails=()=>{
         history.push('/updateuser')
     }
+
     return (
         <Container>
             <h4 data-testid="success">Successfully logged in!</h4>

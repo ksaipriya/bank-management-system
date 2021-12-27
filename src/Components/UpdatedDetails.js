@@ -16,7 +16,7 @@ const Test = (a) => {
     const { handleSubmit } = useForm({});
     let history = useHistory()
 
-    //pre populate the fields by fetching dataof current user from db
+    //pre populate the fields by fetching data of current user from db
     for (let index = 0; index < user.length; index++) {
         if (temp === user[index].id) {
             document.getElementById('name').setAttribute('value', user[index].name)

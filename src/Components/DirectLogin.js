@@ -14,6 +14,8 @@ const DirectLogin = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         let k = ''
+
+        //checking if the credentials are right
         for (let index = 0; index < userData.length; index++) {
             if (username === userData[index].username && password === userData[index].password) {
                 flag = 'true'
@@ -40,7 +42,7 @@ const DirectLogin = () => {
         history.push('/register')
     }
 
-    //fetches and sets the data from the db
+    //fetches and sets the data from the db 
     useEffect(() => {
         fetch('https://bank-management-sys.herokuapp.com/api/users')
             .then(res => {

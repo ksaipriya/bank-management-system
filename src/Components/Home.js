@@ -7,8 +7,10 @@ import { Label } from 'reactstrap';
 
 // landing page
 const Home = () => {
+    
     const { loginWithRedirect, isAuthenticated } = useAuth0()
     let history = useHistory()
+    
     useEffect(() => {
         if (isAuthenticated) {
             history.push('/welcome')
