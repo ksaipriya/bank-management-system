@@ -33,7 +33,7 @@ const ApplyLoan = (a) => {
             income: yup.string().required(),
         })
     }
-    //vlaidations for personal / home loans
+    //validations for personal / home loans
     else {
         loanSchema = yup.object({
             loanamount: yup.string().required(),
